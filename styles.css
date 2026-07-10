@@ -621,33 +621,6 @@ body:hover .cursor-glow { opacity: 1; }
     background: var(--bg-secondary);
 }
 
-.work-filter {
-    display: flex;
-    justify-content: center;
-    gap: 8px;
-    margin-bottom: 48px;
-    flex-wrap: wrap;
-}
-
-.filter-btn {
-    padding: 8px 20px;
-    border-radius: 50px;
-    background: transparent;
-    border: 1px solid var(--border-color);
-    color: var(--text-secondary);
-    font-family: var(--font-primary);
-    font-size: 0.85rem;
-    font-weight: 500;
-    cursor: pointer;
-    transition: var(--transition-fast);
-}
-
-.filter-btn.active, .filter-btn:hover {
-    background: var(--accent);
-    border-color: var(--accent);
-    color: white;
-}
-
 .work-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
