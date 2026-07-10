@@ -1,5 +1,5 @@
 /* ============================================
-   INFINITY PRODUCT - PORTFOLIO SCRIPTS
+   INFINITY PRODUCT - AGENCY PORTFOLIO SCRIPTS
    ============================================ */
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -14,8 +14,8 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     function animateCursor() {
-        glowX += (mouseX - glowX) * 0.1;
-        glowY += (mouseY - glowY) * 0.1;
+        glowX += (mouseX - glowX) * 0.08;
+        glowY += (mouseY - glowY) * 0.08;
         cursorGlow.style.left = glowX + 'px';
         cursorGlow.style.top = glowY + 'px';
         requestAnimationFrame(animateCursor);
@@ -34,7 +34,6 @@ document.addEventListener('DOMContentLoaded', () => {
             navbar.classList.remove('scrolled');
         }
 
-        // Active section highlight
         let current = '';
         sections.forEach(section => {
             const sectionTop = section.offsetTop - 100;
@@ -81,9 +80,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // Counter Animation
-    const statNumbers = document.querySelectorAll('.stat-number');
-    const suffixElements = document.querySelectorAll('.stat-suffix');
-
     function animateCounter(el) {
         const target = parseInt(el.getAttribute('data-target'));
         const duration = 2000;
@@ -94,12 +90,12 @@ document.addEventListener('DOMContentLoaded', () => {
             const progress = Math.min(elapsed / duration, 1);
             const easeProgress = 1 - Math.pow(1 - progress, 3);
             const current = Math.floor(target * easeProgress);
-            el.textContent = current;
+            el.textContent = current.toLocaleString();
 
             if (progress < 1) {
                 requestAnimationFrame(update);
             } else {
-                el.textContent = target;
+                el.textContent = target.toLocaleString();
             }
         }
         requestAnimationFrame(update);
@@ -116,58 +112,28 @@ document.addEventListener('DOMContentLoaded', () => {
             if (entry.isIntersecting) {
                 entry.target.classList.add('visible');
 
-                // Trigger counter animation
+                // Trigger counter animations
                 if (entry.target.classList.contains('hero-stats')) {
-                    statNumbers.forEach(el => animateCounter(el));
+                    entry.target.querySelectorAll('.stat-number').forEach(el => animateCounter(el));
+                }
+                if (entry.target.classList.contains('results-grid')) {
+                    entry.target.querySelectorAll('.result-number').forEach(el => animateCounter(el));
                 }
             }
         });
     }, observerOptions);
 
     // Add reveal class to elements
-    document.querySelectorAll('.section-header, .work-card, .youtube-card, .contact-card, .skill-item, .about-card').forEach(el => {
+    document.querySelectorAll('.section-header, .service-card, .work-card, .short-card, .contact-card, .skill-item, .about-card, .testimonial-card, .result-card').forEach(el => {
         el.classList.add('reveal');
         observer.observe(el);
     });
 
-    // Also observe hero stats
+    // Also observe hero stats and results grid
     const heroStats = document.querySelector('.hero-stats');
     if (heroStats) observer.observe(heroStats);
-
-    // Video Modal
-    const videoModal = document.getElementById('videoModal');
-    const modalVideo = document.getElementById('modalVideo');
-    const modalTitle = document.getElementById('modalTitle');
-    const modalDesc = document.getElementById('modalDesc');
-    const modalClose = document.getElementById('modalClose');
-    const modalBackdrop = document.getElementById('modalBackdrop');
-
-    function openModal(videoSrc, title, desc) {
-        modalVideo.src = videoSrc;
-        modalTitle.textContent = title;
-        modalDesc.textContent = desc;
-        videoModal.classList.add('active');
-        document.body.style.overflow = 'hidden';
-        setTimeout(() => {
-            modalVideo.play().catch(() => {});
-        }, 300);
-    }
-
-    function closeModal() {
-        videoModal.classList.remove('active');
-        modalVideo.pause();
-        modalVideo.src = '';
-        document.body.style.overflow = '';
-    }
-
-    modalClose.addEventListener('click', closeModal);
-    modalBackdrop.addEventListener('click', closeModal);
-
-    document.addEventListener('keydown', (e) => {
-        if (e.key === 'Escape' && videoModal.classList.contains('active')) {
-            closeModal();
-        }
-    });
+    const resultsGrid = document.querySelector('.results-grid');
+    if (resultsGrid) observer.observe(resultsGrid);
 
     // Filter Buttons
     const filterBtns = document.querySelectorAll('.filter-btn');
@@ -184,7 +150,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 const category = card.getAttribute('data-category');
                 if (filter === 'all' || category === filter) {
                     card.style.display = '';
-                    card.style.animation = `fadeInUp 0.5s ease-out ${index * 0.1}s forwards`;
+                    card.style.animation = `fadeInUp 0.5s ease-out ${index * 0.08}s forwards`;
                 } else {
                     card.style.display = 'none';
                 }
@@ -196,13 +162,13 @@ document.addEventListener('DOMContentLoaded', () => {
     window.addEventListener('scroll', () => {
         const scrollY = window.scrollY;
         document.querySelectorAll('.shape').forEach((shape, i) => {
-            const speed = (i + 1) * 0.02;
+            const speed = (i + 1) * 0.015;
             shape.style.transform = `translateY(${scrollY * speed}px)`;
         });
     });
 
     // Magnetic Button Effect
-    document.querySelectorAll('.btn').forEach(btn => {
+    document.querySelectorAll('.btn, .nav-cta').forEach(btn => {
         btn.addEventListener('mousemove', (e) => {
             const rect = btn.getBoundingClientRect();
             const x = e.clientX - rect.left - rect.width / 2;
@@ -221,10 +187,27 @@ document.addEventListener('DOMContentLoaded', () => {
             const rect = card.getBoundingClientRect();
             const x = (e.clientX - rect.left) / rect.width;
             const y = (e.clientY - rect.top) / rect.height;
-            const rotateX = (y - 0.5) * -8;
-            const rotateY = (x - 0.5) * 8;
+            const rotateX = (y - 0.5) * -6;
+            const rotateY = (x - 0.5) * 6;
 
             card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-4px)`;
+        });
+
+        card.addEventListener('mouseleave', () => {
+            card.style.transform = '';
+        });
+    });
+
+    // Tilt Effect on Service Cards
+    document.querySelectorAll('.service-card').forEach(card => {
+        card.addEventListener('mousemove', (e) => {
+            const rect = card.getBoundingClientRect();
+            const x = (e.clientX - rect.left) / rect.width;
+            const y = (e.clientY - rect.top) / rect.height;
+            const rotateX = (y - 0.5) * -4;
+            const rotateY = (x - 0.5) * 4;
+
+            card.style.transform = `perspective(800px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-4px)`;
         });
 
         card.addEventListener('mouseleave', () => {
@@ -238,6 +221,4 @@ document.addEventListener('DOMContentLoaded', () => {
     window.addEventListener('load', () => {
         document.body.style.opacity = '1';
     });
-
-    console.log('%c Infinity Product Portfolio ', 'background: linear-gradient(135deg, #6c5ce7, #a855f7); color: white; padding: 10px 20px; border-radius: 8px; font-size: 14px; font-weight: bold;');
 });
