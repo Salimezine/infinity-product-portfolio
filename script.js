@@ -135,6 +135,27 @@ document.addEventListener('DOMContentLoaded', () => {
     const resultsGrid = document.querySelector('.results-grid');
     if (resultsGrid) observer.observe(resultsGrid);
 
+    // Filter Buttons
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    const workCards = document.querySelectorAll('.work-card');
+
+    filterBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            filterBtns.forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+            const filter = btn.getAttribute('data-filter');
+            workCards.forEach((card, index) => {
+                const category = card.getAttribute('data-category');
+                if (filter === 'all' || category === filter) {
+                    card.style.display = '';
+                    card.style.animation = `fadeInUp 0.5s ease-out ${index * 0.08}s forwards`;
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        });
+    });
+
     // Parallax Effect on Hero Shapes
     window.addEventListener('scroll', () => {
         const scrollY = window.scrollY;
