@@ -589,7 +589,7 @@ body:hover .cursor-glow { opacity: 1; }
 
 .work-card:hover {
     border-color: var(--border-hover);
-    transform: translateY(-4px);
+    transform: translateY(-6px) scale(1.01);
     box-shadow: var(--shadow-glow);
 }
 
@@ -599,6 +599,12 @@ body:hover .cursor-glow { opacity: 1; }
     aspect-ratio: 16/9;
     overflow: hidden;
     background: #000;
+    border-radius: 12px 12px 0 0;
+}
+
+.work-card:hover .work-video-wrapper {
+    transform: scale(1.02);
+    transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
 .work-video-wrapper video {
@@ -608,11 +614,21 @@ body:hover .cursor-glow { opacity: 1; }
     transition: var(--transition-smooth);
 }
 
+.work-card:hover .work-video-wrapper video {
+    transform: scale(1.05);
+}
+
 .work-video-wrapper iframe,
 .drive-embed {
     width: 100%;
     height: 100%;
     border: none;
+    transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.work-card:hover .work-video-wrapper iframe,
+.work-card:hover .drive-embed {
+    transform: scale(1.03);
 }
 
 .work-video-lg {
@@ -675,12 +691,27 @@ body:hover .cursor-glow { opacity: 1; }
 
 .play-btn i { margin-left: 3px; }
 
-.work-info { padding: 20px; }
+.work-info { 
+    padding: 20px; 
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.work-card:hover .work-info {
+    padding-bottom: 24px;
+}
 
 .work-meta {
     display: flex;
     justify-content: space-between;
     margin-bottom: 8px;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: all 0.3s ease;
+}
+
+.work-card:hover .work-meta {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .work-category {
@@ -701,12 +732,27 @@ body:hover .cursor-glow { opacity: 1; }
     font-size: 1.15rem;
     font-weight: 600;
     margin-bottom: 6px;
+    transition: color 0.3s ease;
+}
+
+.work-card:hover .work-title {
+    color: var(--accent-primary);
 }
 
 .work-desc {
     font-size: 0.85rem;
     color: var(--text-secondary);
     line-height: 1.5;
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.work-card:hover .work-desc {
+    max-height: 100px;
+    opacity: 1;
+    margin-top: 8px;
 }
 
 /* ============ YOUTUBE SECTION ============ */
