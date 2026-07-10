@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mohamed Salim Ezzine | Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+    <div class="cursor-glow" id="cursorGlow"></div>
+
+    <nav class="navbar" id="navbar">
+        <div class="nav-content">
+            <a href="#" class="nav-logo">
+                <span class="logo-icon"><i class="fas fa-infinity"></i></span>
+                <span class="logo-text">Infinity<span class="accent">Product</span></span>
+            </a>
+            <div class="nav-links" id="navLinks">
+                <a href="#home" class="nav-link active">Home</a>
+                <a href="#work" class="nav-link">Work</a>
+                <a href="#youtube" class="nav-link">YouTube</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </div>
+            <button class="nav-toggle" id="navToggle">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <section class="hero" id="home">
+        <div class="hero-bg">
+            <div class="grid-overlay"></div>
+            <div class="floating-shapes">
+                <div class="shape shape-1"></div>
+                <div class="shape shape-2"></div>
+                <div class="shape shape-3"></div>
+                <div class="shape shape-4"></div>
+                <div class="shape shape-5"></div>
+            </div>
+        </div>
+        <div class="hero-content">
+            <div class="hero-badge">
+                <span class="badge-dot"></span>
+                Available for work
+            </div>
+            <h1 class="hero-title">
+                <span class="line line-1">Mohamed Salim</span>
+                <span class="line line-2">
+                    <span class="gradient-text">Ezzine</span>
+                </span>
+            </h1>
+            <p class="hero-subtitle">
+                Assistant Comptable Auditeur & Creative Content Creator.
+                Crafting stunning videos and visual content that brings ideas to life.
+            </p>
+            <div class="hero-actions">
+                <a href="#work" class="btn btn-primary">
+                    <span>View My Work</span>
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+                <a href="https://www.youtube.com/@Infinity_Product" target="_blank" class="btn btn-secondary">
+                    <i class="fab fa-youtube"></i>
+                    <span>YouTube Channel</span>
+                </a>
+            </div>
+            <div class="hero-stats">
+                <div class="stat">
+                    <span class="stat-number" data-target="6">0</span>
+                    <span class="stat-label">Projects</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number" data-target="100">0</span><span class="stat-suffix">+</span>
+                    <span class="stat-label">Hours of Work</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number" data-target="1000">0</span><span class="stat-suffix">+</span>
+                    <span class="stat-label">Views</span>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="mouse">
+                <div class="mouse-wheel"></div>
+            </div>
+            <span>Scroll Down</span>
+        </div>
+    </section>
+
+    <section class="section work-section" id="work">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Selected Work</span>
+                <h2 class="section-title">Featured <span class="gradient-text">Projects</span></h2>
+                <p class="section-desc">A showcase of my best creative work — each project tells a story through motion and design.</p>
+            </div>
+            <div class="work-filter">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="video">Videos</button>
+            </div>
+            <div class="work-grid">
+                <div class="work-card" data-category="video">
+                    <div class="work-card-inner">
+                        <div class="work-video-wrapper">
+                            <video src="0206.mp4" preload="metadata" muted loop></video>
+                            <div class="work-overlay">
+                                <button class="play-btn"><i class="fas fa-play"></i></button>
+                            </div>
+                        </div>
+                        <div class="work-info">
+                            <div class="work-meta">
+                                <span class="work-category">Video Production</span>
+                                <span class="work-year">2024</span>
+                            </div>
+                            <h3 class="work-title">Creative Project 01</h3>
+                            <p class="work-desc">Dynamic video content showcasing creative storytelling and visual effects.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="work-card" data-category="video">
+                    <div class="work-card-inner">
+                        <div class="work-video-wrapper">
+                            <video src="0204.mp4" preload="metadata" muted loop></video>
+                            <div class="work-overlay">
+                                <button class="play-btn"><i class="fas fa-play"></i></button>
+                            </div>
+                        </div>
+                        <div class="work-info">
+                            <div class="work-meta">
+                                <span class="work-category">Video Production</span>
+                                <span class="work-year">2024</span>
+                            </div>
+                            <h3 class="work-title">Creative Project 02</h3>
+                            <p class="work-desc">Engaging visual narrative with smooth transitions and captivating effects.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="work-card" data-category="video">
+                    <div class="work-card-inner">
+                        <div class="work-video-wrapper">
+                            <video src="0609.mp4" preload="metadata" muted loop></video>
+                            <div class="work-overlay">
+                                <button class="play-btn"><i class="fas fa-play"></i></button>
+                            </div>
+                        </div>
+                        <div class="work-info">
+                            <div class="work-meta">
+                                <span class="work-category">Video Production</span>
+                                <span class="work-year">2024</span>
+                            </div>
+                            <h3 class="work-title">Creative Project 03</h3>
+                            <p class="work-desc">Professional video production with cinematic quality and artistic vision.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="work-card" data-category="video">
+                    <div class="work-card-inner">
+                        <div class="work-video-wrapper">
+                            <video src="0613.mp4" preload="metadata" muted loop></video>
+                            <div class="work-overlay">
+                                <button class="play-btn"><i class="fas fa-play"></i></button>
+                            </div>
+                        </div>
+                        <div class="work-info">
+                            <div class="work-meta">
+                                <span class="work-category">Video Production</span>
+                                <span class="work-year">2024</span>
+                            </div>
+                            <h3 class="work-title">Creative Project 04</h3>
+                            <p class="work-desc">Innovative content creation blending motion graphics and real footage.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="work-card" data-category="video">
+                    <div class="work-card-inner">
+                        <div class="work-video-wrapper">
+                            <video src="0416.mp4" preload="metadata" muted loop></video>
+                            <div class="work-overlay">
+                                <button class="play-btn"><i class="fas fa-play"></i></button>
+                            </div>
+                        </div>
+                        <div class="work-info">
+                            <div class="work-meta">
+                                <span class="work-category">Video Production</span>
+                                <span class="work-year">2024</span>
+                            </div>
+                            <h3 class="work-title">Creative Project 05</h3>
+                            <p class="work-desc">Compelling visual storytelling that captivates and inspires audiences.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="work-card" data-category="video">
+                    <div class="work-card-inner">
+                        <div class="work-video-wrapper">
+                            <video src="0315.mp4" preload="metadata" muted loop></video>
+                            <div class="work-overlay">
+                                <button class="play-btn"><i class="fas fa-play"></i></button>
+                            </div>
+                        </div>
+                        <div class="work-info">
+                            <div class="work-meta">
+                                <span class="work-category">Video Production</span>
+                                <span class="work-year">2024</span>
+                            </div>
+                            <h3 class="work-title">Creative Project 06</h3>
+                            <p class="work-desc">Cutting-edge video content designed for maximum impact and engagement.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section youtube-section" id="youtube">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag"><i class="fab fa-youtube"></i> YouTube</span>
+                <h2 class="section-title">My <span class="gradient-text">Shorts</span></h2>
+                <p class="section-desc">Watch my latest YouTube Shorts directly here.</p>
+            </div>
+            <div class="yt-channel-card">
+                <img src="https://yt3.googleusercontent.com/a4zkHXpQfhocnokELsT1SKCUFTCptECVeKTPtMNcciZAsxd15P7G0R-5cn3qW-SlXko7Xrs9lA=s900-c-k-c0x00ffffff-no-rj" alt="Infinity Product" class="yt-avatar">
+                <div class="yt-info">
+                    <h3>Infinity Product</h3>
+                    <p>@Infinity_Product</p>
+                </div>
+                <a href="https://www.youtube.com/@Infinity_Product" target="_blank" class="btn btn-youtube">
+                    <i class="fab fa-youtube"></i>
+                    <span>Subscribe</span>
+                </a>
+            </div>
+            <div class="shorts-grid">
+                <a href="https://www.youtube.com/shorts/GE6gAUhQ3Yk" target="_blank" class="short-card">
+                    <img src="https://i4.ytimg.com/vi/GE6gAUhQ3Yk/maxresdefault.jpg" alt="Automatic Door Closer" class="short-thumb" onerror="this.src='https://i4.ytimg.com/vi/GE6gAUhQ3Yk/hqdefault.jpg'">
+                    <div class="short-overlay">
+                        <div class="short-play"><i class="fas fa-play"></i></div>
+                        <span class="short-title">Automatic Door Closer</span>
+                    </div>
+                </a>
+                <a href="https://www.youtube.com/shorts/-ol-ZiLqyKU" target="_blank" class="short-card">
+                    <img src="https://i2.ytimg.com/vi/-ol-ZiLqyKU/maxresdefault.jpg" alt="Jellyfish Lamp" class="short-thumb" onerror="this.src='https://i2.ytimg.com/vi/-ol-ZiLqyKU/hqdefault.jpg'">
+                    <div class="short-overlay">
+                        <div class="short-play"><i class="fas fa-play"></i></div>
+                        <span class="short-title">Jellyfish Lamp</span>
+                    </div>
+                </a>
+                <a href="https://www.youtube.com/shorts/SCmvQlmSYLM" target="_blank" class="short-card">
+                    <img src="https://i4.ytimg.com/vi/SCmvQlmSYLM/maxresdefault.jpg" alt="Ninja Drip Coffee Maker" class="short-thumb" onerror="this.src='https://i4.ytimg.com/vi/SCmvQlmSYLM/hqdefault.jpg'">
+                    <div class="short-overlay">
+                        <div class="short-play"><i class="fas fa-play"></i></div>
+                        <span class="short-title">Ninja Drip Coffee Maker</span>
+                    </div>
+                </a>
+                <a href="https://www.youtube.com/shorts/m6c1WLYZRwQ" target="_blank" class="short-card">
+                    <img src="https://i2.ytimg.com/vi/m6c1WLYZRwQ/maxresdefault.jpg" alt="Gimbal Stabilizer" class="short-thumb" onerror="this.src='https://i2.ytimg.com/vi/m6c1WLYZRwQ/hqdefault.jpg'">
+                    <div class="short-overlay">
+                        <div class="short-play"><i class="fas fa-play"></i></div>
+                        <span class="short-title">Gimbal Stabilizer</span>
+                    </div>
+                </a>
+                <a href="https://www.youtube.com/shorts/B_ym5O1IIyA" target="_blank" class="short-card">
+                    <img src="https://i3.ytimg.com/vi/B_ym5O1IIyA/maxresdefault.jpg" alt="Making Teapot Japanese" class="short-thumb" onerror="this.src='https://i3.ytimg.com/vi/B_ym5O1IIyA/hqdefault.jpg'">
+                    <div class="short-overlay">
+                        <div class="short-play"><i class="fas fa-play"></i></div>
+                        <span class="short-title">Making Teapot Japanese</span>
+                    </div>
+                </a>
+                <a href="https://www.youtube.com/shorts/hB2OySPOKE8" target="_blank" class="short-card">
+                    <img src="https://i1.ytimg.com/vi/hB2OySPOKE8/maxresdefault.jpg" alt="Portable Bottle Warmer" class="short-thumb" onerror="this.src='https://i1.ytimg.com/vi/hB2OySPOKE8/hqdefault.jpg'">
+                    <div class="short-overlay">
+                        <div class="short-play"><i class="fas fa-play"></i></div>
+                        <span class="short-title">Portable Bottle Warmer</span>
+                    </div>
+                </a>
+            </div>
+            <div class="youtube-cta">
+                <div class="cta-content">
+                    <h3>Want to see more?</h3>
+                    <p>Visit my YouTube channel for the full collection of creative shorts and behind-the-scenes content.</p>
+                </div>
+                <a href="https://www.youtube.com/@Infinity_Product" target="_blank" class="btn btn-primary btn-lg">
+                    <i class="fab fa-youtube"></i>
+                    <span>Go to YouTube Channel</span>
+                    <i class="fas fa-external-link-alt"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section class="section about-section" id="about">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-visual">
+                    <div class="about-card-stack">
+                        <div class="about-card about-card-1">
+                            <i class="fas fa-calculator"></i>
+                            <span>Comptabilite & Audit</span>
+                        </div>
+                        <div class="about-card about-card-2">
+                            <i class="fas fa-video"></i>
+                            <span>Video Editing</span>
+                        </div>
+                        <div class="about-card about-card-3">
+                            <i class="fas fa-mobile-alt"></i>
+                            <span>Content Creator</span>
+                        </div>
+                    </div>
+                    <div class="about-glow"></div>
+                </div>
+                <div class="about-content">
+                    <span class="section-tag">About Me</span>
+                        <h2 class="section-title">Turning Ideas Into <span class="gradient-text">Visual Reality</span></h2>
+                    <p class="about-text">
+                        I'm Mohamed Salim Ezzine — an Assistant Comptable Auditeur with a passion for
+                        crafting visually stunning digital experiences. Beyond accounting and auditing,
+                        I specialize in video editing, motion graphics, and creative content creation,
+                        bringing ideas to life through the power of visual media.
+                    </p>
+                    <div class="skills-grid">
+                        <div class="skill-item">
+                            <div class="skill-icon"><i class="fas fa-calculator"></i></div>
+                            <div class="skill-info">
+                                <h4>Comptabilite & Audit</h4>
+                                <p>Gestion comptable, declarations fiscales et controle</p>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon"><i class="fas fa-film"></i></div>
+                            <div class="skill-info">
+                                <h4>Video Production</h4>
+                                <p>CapCut, montage video pro et post-production</p>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon"><i class="fas fa-chart-line"></i></div>
+                            <div class="skill-info">
+                                <h4>Gestion Financiere</h4>
+                                <p>Bilans, budgets et tableaux de bord financiers</p>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon"><i class="fas fa-mobile-alt"></i></div>
+                            <div class="skill-info">
+                                <h4>Content Creation</h4>
+                                <p>YouTube Shorts, Reels, et contenu viral</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section contact-section" id="contact">
+        <div class="container">
+            <div class="contact-wrapper">
+                <div class="section-header">
+                    <span class="section-tag">Get In Touch</span>
+                    <h2 class="section-title">Let's Create <span class="gradient-text">Something Amazing</span></h2>
+                    <p class="section-desc">Have a project in mind? Let's collaborate and bring your vision to life.</p>
+                </div>
+                <div class="contact-links">
+                    <a href="tel:+21699956883" class="contact-card">
+                        <div class="contact-icon"><i class="fas fa-phone"></i></div>
+                        <h3>Telephone</h3>
+                        <p>99 956 883</p>
+                    </a>
+                    <a href="mailto:ezzinesalim21@gmail.com" class="contact-card">
+                        <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+                        <h3>Email</h3>
+                        <p>ezzinesalim21@gmail.com</p>
+                    </a>
+                    <a href="https://www.youtube.com/@Infinity_Product" target="_blank" class="contact-card">
+                        <div class="contact-icon"><i class="fab fa-youtube"></i></div>
+                        <h3>YouTube</h3>
+                        <p>Infinity Product</p>
+                    </a>
+                    <a href="https://www.instagram.com/infinity_product" target="_blank" class="contact-card">
+                        <div class="contact-icon"><i class="fab fa-instagram"></i></div>
+                        <h3>Instagram</h3>
+                        <p>@infinity_product</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <a href="#" class="nav-logo">
+                        <span class="logo-icon"><i class="fas fa-infinity"></i></span>
+                        <span class="logo-text">Infinity<span class="accent">Product</span></span>
+                    </a>
+                    <p>Mohamed Salim Ezzine — Assistant Comptable Auditeur & Content Creator</p>
+                </div>
+                <div class="footer-social">
+                    <a href="https://www.youtube.com/@Infinity_Product" target="_blank" class="social-link"><i class="fab fa-youtube"></i></a>
+                    <a href="https://www.instagram.com/infinity_product" target="_blank" class="social-link"><i class="fab fa-instagram"></i></a>
+                    <a href="mailto:ezzinesalim21@gmail.com" class="social-link"><i class="fas fa-envelope"></i></a>
+                    <a href="tel:+21699956883" class="social-link"><i class="fas fa-phone"></i></a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Mohamed Salim Ezzine. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Video Modal -->
+    <div class="video-modal" id="videoModal">
+        <div class="modal-backdrop" id="modalBackdrop"></div>
+        <div class="modal-content">
+            <button class="modal-close" id="modalClose"><i class="fas fa-times"></i></button>
+            <video id="modalVideo" controls preload="metadata">
+                Your browser does not support the video tag.
+            </video>
+            <div class="modal-info" id="modalInfo">
+                <h3 id="modalTitle">Project Title</h3>
+                <p id="modalDesc">Project description</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
