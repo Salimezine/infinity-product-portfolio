@@ -608,66 +608,30 @@ body:hover .cursor-glow { opacity: 1; }
     transition: var(--transition-smooth);
 }
 
-.drive-link {
-    display: block;
+.work-video-wrapper iframe,
+.drive-embed {
     width: 100%;
     height: 100%;
+    border: none;
+}
+
+.work-video-lg {
+    width: 100%;
+    height: 350px;
+    background: #000;
+    border-radius: 12px 12px 0 0;
     position: relative;
     overflow: hidden;
-    background: #000;
 }
 
-.drive-thumb {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: var(--transition-smooth);
+.work-card-lg {
+    min-width: 350px;
+    max-width: 450px;
 }
 
-.drive-link:hover .drive-thumb {
-    transform: scale(1.05);
-}
-
-.drive-play-btn {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 64px;
-    height: 64px;
-    border-radius: 50%;
-    background: rgba(255, 0, 0, 0.9);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    font-size: 1.3rem;
-    transition: var(--transition-spring);
-    box-shadow: 0 4px 20px rgba(255, 0, 0, 0.4);
-}
-
-.drive-play-btn i {
-    margin-left: 3px;
-}
-
-.drive-link:hover .drive-play-btn {
-    transform: translate(-50%, -50%) scale(1.15);
-}
-
-.drive-badge {
-    position: absolute;
-    bottom: 12px;
-    right: 12px;
-    padding: 6px 12px;
-    border-radius: 6px;
-    background: rgba(0, 0, 0, 0.7);
-    backdrop-filter: blur(10px);
-    color: white;
-    font-size: 0.7rem;
-    font-weight: 500;
-    display: flex;
-    align-items: center;
-    gap: 6px;
+@media (max-width: 768px) {
+    .work-video-lg { height: 250px; }
+    .work-card-lg { min-width: 280px; max-width: 350px; }
 }
 
 .work-card:hover .work-video-wrapper video {
