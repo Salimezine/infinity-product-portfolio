@@ -169,34 +169,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // Video Cards - Click to open modal
-    document.querySelectorAll('.work-card').forEach(card => {
-        const video = card.querySelector('video');
-        const playBtn = card.querySelector('.play-btn');
-        const title = card.querySelector('.work-title')?.textContent || 'Project';
-        const desc = card.querySelector('.work-desc')?.textContent || '';
-
-        if (video && playBtn) {
-            card.addEventListener('mouseenter', () => {
-                video.play().catch(() => {});
-            });
-
-            card.addEventListener('mouseleave', () => {
-                video.pause();
-                video.currentTime = 0;
-            });
-
-            playBtn.addEventListener('click', (e) => {
-                e.stopPropagation();
-                openModal(video.src, title, desc);
-            });
-
-            card.addEventListener('click', () => {
-                openModal(video.src, title, desc);
-            });
-        }
-    });
-
     // Filter Buttons
     const filterBtns = document.querySelectorAll('.filter-btn');
     const workCards = document.querySelectorAll('.work-card');
