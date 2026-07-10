@@ -1360,7 +1360,7 @@ body:hover .cursor-glow { opacity: 1; }
     .about-text { text-align: center; }
     .skills-grid { grid-template-columns: 1fr; }
 
-    .contact-links { grid-template-columns: 1fr; }
+    .contact-links { flex-direction: column; align-items: center; }
 
     .footer-content {
         grid-template-columns: 1fr;
@@ -1373,7 +1373,7 @@ body:hover .cursor-glow { opacity: 1; }
 }
 
 @media (max-width: 480px) {
-    .contact-links { grid-template-columns: 1fr; }
+    .contact-links { flex-direction: column; align-items: center; }
     .hero-actions { flex-direction: column; align-items: center; }
     .hero-stats { flex-direction: column; gap: 16px; }
     .shorts-grid { grid-template-columns: 1fr; }
