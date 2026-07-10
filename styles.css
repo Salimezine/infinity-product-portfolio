@@ -710,9 +710,6 @@ body:hover .cursor-glow { opacity: 1; }
 }
 
 .work-meta {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
     margin-bottom: 10px;
 }
 
