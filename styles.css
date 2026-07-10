@@ -484,6 +484,7 @@ body:hover .cursor-glow { opacity: 1; }
 .section-header {
     text-align: center;
     margin-bottom: 64px;
+    width: 100%;
 }
 
 .section-tag {
@@ -507,6 +508,7 @@ body:hover .cursor-glow { opacity: 1; }
     font-weight: 800;
     letter-spacing: -0.02em;
     margin-bottom: 16px;
+    text-align: center;
 }
 
 .section-desc {
@@ -515,6 +517,7 @@ body:hover .cursor-glow { opacity: 1; }
     max-width: 500px;
     margin: 0 auto;
     line-height: 1.7;
+    text-align: center;
 }
 
 /* ============ SERVICES ============ */
@@ -1140,7 +1143,7 @@ body:hover .cursor-glow { opacity: 1; }
 
 .contact-links {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 20px;
     max-width: 900px;
     margin: 0 auto;
@@ -1351,7 +1354,7 @@ body:hover .cursor-glow { opacity: 1; }
     .about-text { text-align: center; }
     .skills-grid { grid-template-columns: 1fr; }
 
-    .contact-links { grid-template-columns: 1fr 1fr; }
+    .contact-links { grid-template-columns: 1fr; }
 
     .footer-content {
         grid-template-columns: 1fr;
