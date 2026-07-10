@@ -681,7 +681,7 @@ body:hover .cursor-glow { opacity: 1; }
 .work-video-wrapper {
     position: relative;
     width: 100%;
-    aspect-ratio: 16/9;
+    height: 350px;
     overflow: hidden;
     background: #000;
 }
@@ -691,6 +691,12 @@ body:hover .cursor-glow { opacity: 1; }
     width: 100%;
     height: 100%;
     border: none;
+}
+
+@media (max-width: 768px) {
+    .work-video-wrapper {
+        height: 250px;
+    }
 }
 
 .work-info {
@@ -736,6 +742,9 @@ body:hover .cursor-glow { opacity: 1; }
     color: var(--text-secondary);
     line-height: 1.5;
     margin-bottom: 14px;
+    max-height: 100px;
+    overflow: hidden;
+    opacity: 1;
 }
 
 .work-tags {
